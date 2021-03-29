@@ -1,8 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n1,n2,n3,i,j,row1,row2,row3,row4,row5,column1,column2,column3,column4,column5,diagonal1,diagonal2,diagonal3,diagonal4,diagonal5;
-    int rows1,rows2,rows3,columns1,columns2,columns3,diagonals1,diagonals2,diagonals3;
+    int n1,n2,n3,i,j,row1=0,row2=0,row3=0,column1=0,column2=0,column3=0,diagonal1=0,diagonal2=0,diagonal3=0,diagonal4=0,diagonal5=0,diagonal6=0;
     scanf("%d %d %d" ,&n1,&n2,&n3);
     int s1[10][10],s2[10][10],s3[10][10];
     printf("\n");
@@ -14,7 +13,7 @@ int main()
         }
     }
     printf("\n");
-    /*for(i=0;i<n2;i++)
+    for(i=0;i<n2;i++)
     {
         for(j=0;j<n2;j++)
         {
@@ -29,7 +28,7 @@ int main()
             scanf("%d" ,&s3[i][j]);
         }
     }
-    */for(i=0;i<n1;i++)
+    for(i=0;i<n1;i++)
     {
         for(j=0;j<n1;j++)
         {
@@ -37,18 +36,72 @@ int main()
             column1+=s1[j][i];
             if(s1[i][j]==s1[j][i])
             {
-                diagonal1+=s1[i][j];
+                diagonal1=s1[i][j];
             }
         }
     }
-    for(i=3;i>0;i--)
+    for(i=2;i>=0;i--)
     {
         for(j=0;j<n1;j++)
         {
-                diagonal1+=s1[i][j];
+                diagonal2=s1[i][j]+s1[j][i];
         }
     }
-    if(row1==column1&&row1==diagonal1&&column1==diagonal1)
+    for(i=0;i<n2;i++)
+    {
+        for(j=0;j<n2;j++)
+        {
+            row2+=s2[i][j];
+            column2+=s2[j][i];
+            if(s2[i][j]==s2[j][i])
+            {
+                diagonal3+=s2[i][j];
+            }
+        }
+    }
+    for(i=n2-1;i>=0;i--)
+    {
+        for(j=0;j<n2;j++)
+        {
+                diagonal4=s2[i][j]+s2[j][i];
+        }
+    }
+    for(i=0;i<n3;i++)
+    {
+        for(j=0;j<n3;j++)
+        {
+            row3+=s3[i][j];
+            column3+=s3[j][i];
+            if(s3[i][j]==s3[j][i])
+            {
+                diagonal5+=s3[i][j];
+            }
+        }
+    }
+    for(i=n3-1;i>=0;i--)
+    {
+        for(j=0;j<n3;j++)
+        {
+                diagonal6=s3[i][j]+s3[j][i];
+        }
+    }
+    if(row1==column1)
+    {
+        printf("yes\n");
+    }
+    else
+    {
+        printf("no\n");
+    }
+    if(row2==column2)
+    {
+        printf("yes\n");
+    }
+    else
+    {
+        printf("no\n");
+    }
+    if(row3==column3)
     {
         printf("yes");
     }
