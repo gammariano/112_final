@@ -1,8 +1,12 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n,i,j,looblike;
     scanf("%d" ,&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d" ,&looblike);
+    }
 
-    reutrn 0;
+    return 0;
 }
