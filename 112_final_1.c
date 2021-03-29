@@ -7,11 +7,10 @@ int main()
     n=n/10;
     if(n<num1)
     {
-        n+=1;
-        printf("%d" ,n);
-    }
-    else
-    {
+        if(num1>=100)
+        {
+            n+=1;
+        }
         printf("%d" ,n);
     }
     printf("%d" ,c);
