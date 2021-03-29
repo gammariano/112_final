@@ -20,6 +20,14 @@ int main()
             scanf("%d" ,&s2[i][j]);
         }
     }
+    printf("\n");
+    for(i=0;i<n3;i++)
+    {
+        for(j=0;j<n3;j++)
+        {
+            scanf("%d" ,&s3[i][j]);
+        }
+    }
 
     return 0;
 }
