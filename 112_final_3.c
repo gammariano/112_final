@@ -87,11 +87,11 @@ int main()
     }
     if(row1==column1)
     {
-        printf("yes\n");
+        printf("no\n");
     }
     else
     {
-        printf("no\n");
+        printf("yes\n");
     }
     if(row2==column2)
     {
